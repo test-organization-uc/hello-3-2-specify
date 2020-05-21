@@ -1,0 +1,118 @@
+
+Showing logs for build [32mtest-organization-uc-hello-3-2-77zvw-2[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-lsm2z[0m
+{"level":"info","ts":1590087511.6227915,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1590087511.6235068,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mtest-organization-uc-hello-3-2-77zvw-2[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-lz75x[0m
+{"level":"info","ts":1590087512.0820336,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1590087512.083565,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mtest-organization-uc-hello-3-2-77zvw-2[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mtest-organization-uc-hello-3-2-77zvw-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-test-organization-uc-hello-3-2-77zvw-zp8f6[0m
+{"level":"info","ts":1590087519.190611,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/refs/heads/0.8.0-ns-support: no such file or directory"}
+{"level":"info","ts":1590087519.6844728,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/test-organization-uc/hello-3-2-specify.git @ v0.0.2 in path /workspace/source"}
+
+Showing logs for build [32mtest-organization-uc-hello-3-2-77zvw-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:70bf41b41f076795a5941a32604e078d5a97c17f
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mtest-organization-uc-hello-3-2-77zvw-2[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mtest-organization-uc-hello-3-2-77zvw-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
+Command "credential" is deprecated, it will be removed on Jun 1 2020.  This is replaced by Tekton's mounted secrets
+WARNING: failed to find Secret npm-token in namespace **
+
+Showing logs for build [32mtest-organization-uc-hello-3-2-77zvw-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
+npm WARN express-hello@1.0.0 No repository field.
+
+added 50 packages from 37 contributors and audited 50 packages in 1.359s
+found 0 vulnerabilities
+
+
+Showing logs for build [32mtest-organization-uc-hello-3-2-77zvw-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
+
+> express-hello@1.0.0 test /workspace/source
+> exit 0
+
+
+Showing logs for build [32mtest-organization-uc-hello-3-2-77zvw-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+E0521 18:58:47.853553      10 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
+[36mINFO[0m[0001] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0001] Retrieving image manifest node:9-slim        
+E0521 18:58:48.163471      10 metadata.go:154] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+E0521 18:58:48.166180      10 metadata.go:166] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+[36mINFO[0m[0004] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0005] Built cross stage deps: map[]                
+[36mINFO[0m[0005] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0005] Retrieving image manifest node:9-slim        
+[36mINFO[0m[0006] Executing 0 build triggers                   
+[36mINFO[0m[0006] cmd: EXPOSE                                  
+[36mINFO[0m[0006] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0006] Checking for cached layer gcr.io/jenkins-x-276923/cache:c1741a1d5dd576b6e37115d9bd6dd9c88c40954fe7a0ff98418af76c40780120... 
+[36mINFO[0m[0006] No cached layer found for cmd COPY . .       
+[36mINFO[0m[0006] Unpacking rootfs as cmd COPY . . requires it. 
+[36mINFO[0m[0012] ENV PORT 8080                                
+[36mINFO[0m[0012] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0012] EXPOSE 8080                                  
+[36mINFO[0m[0012] cmd: EXPOSE                                  
+[36mINFO[0m[0012] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0012] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0012] WORKDIR /usr/src/app                         
+[36mINFO[0m[0012] cmd: workdir                                 
+[36mINFO[0m[0012] Changed working directory to /usr/src/app    
+[36mINFO[0m[0012] Creating directory /usr/src/app              
+[36mINFO[0m[0012] Resolving 1 paths                            
+[36mINFO[0m[0012] Taking snapshot of files...                  
+[36mINFO[0m[0012] COPY . .                                     
+[36mINFO[0m[0012] Resolving 514 paths                          
+[36mINFO[0m[0012] Taking snapshot of files...                  
+[36mINFO[0m[0012] CMD ["npm", "start"]                         
+[36mINFO[0m[0012] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0012] Pushing layer gcr.io/jenkins-x-276923/cache:c1741a1d5dd576b6e37115d9bd6dd9c88c40954fe7a0ff98418af76c40780120 to cache now 
+
+Showing logs for build [32mtest-organization-uc-hello-3-2-77zvw-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mtest-organization-uc-hello-3-2-77zvw-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/hello-3-2-specify to an unshallow repository
+Generating change log from git ref d5fc9d581229a9a7d1981b6c65940f1932978d85 => 6391c375bca7709bcdeb4c0e86c447c0e89188fe
+Associating user x-0 in users.jenkins.io with email ernesto.espinosa@gmail.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 70bf41b41f076795a5941a32604e078d5a97c17f with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Associating user x-0 in users.jenkins.io with email ernesto.espinosa@gmail.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 70bf41b41f076795a5941a32604e078d5a97c17f with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Finding issues in commit messages using git format
+WARNING: No release found for test-organization-uc/hello-3-2-specify and tag v0.0.2 so creating a new release
+Updated the release information at https://github.com/test-organization-uc/hello-3-2-specify/releases/tag/v0.0.2
+generated: /workspace/source/charts/hello-3-2-specify/templates/release.yaml
+Created Release hello-3-2-specify-0-0-2 resource in namespace **
+Updating PipelineActivity test-organization-uc-hello-3-2-specify-master-2 with version 0.0.2
+Updated PipelineActivities test-organization-uc-hello-3-2-specify-master-2 with release notes URL: https://github.com/test-organization-uc/hello-3-2-specify/releases/tag/v0.0.2
+
+Showing logs for build [32mtest-organization-uc-hello-3-2-77zvw-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file hello-3-2-specify-0.0.2.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mtest-organization-uc-hello-3-2-77zvw-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app hello-3-2-specify version 0.0.2 to namespace **-staging
+Created Pull Request: https://github.com/test-organization-uc/environment-jenkinsx-staging/pull/6
+Added label updatebot to Pull Request https://github.com/test-organization-uc/environment-jenkinsx-staging/pull/6
+got git provider status pending from PR https://github.com/test-organization-uc/environment-jenkinsx-staging/pull/6
+got git provider status pending from PR https://github.com/test-organization-uc/environment-jenkinsx-staging/pull/6
+got git provider status pending from PR https://github.com/test-organization-uc/environment-jenkinsx-staging/pull/6
+got git provider status pending from PR https://github.com/test-organization-uc/environment-jenkinsx-staging/pull/6
+got git provider status pending from PR https://github.com/test-organization-uc/environment-jenkinsx-staging/pull/6
+Pull Request https://github.com/test-organization-uc/environment-jenkinsx-staging/pull/6 is merged at sha f1e5cb481e4000fd85d66ee4695150ca09f60df5
+Pull Request merged but we are not waiting for the update pipeline to complete!
